@@ -1,0 +1,715 @@
+/* -------------------------GENERAL DESIGN---------------------- */
+/* ALL FONTS HAVE ONSCREEN CITATION IN FOOTER */
+
+@font-face {
+    font-family: Coyote;
+    src: url(../fonts/Coyote.otf);
+    /*Font Source: https://www.dafont.com/coyote.font
+    Free for use. */
+}
+
+@font-face {
+    font-family: Musket;
+    src: url(../fonts/Musket_regular.otf);
+    /*Font Source: http://bybu.es/portfolio/musket/
+    Free for commerical use. */
+}
+
+@font-face {
+    font-family: MusketB;
+    src: url(../fonts/Musket_bold.otf);
+    /*Font Source: http://bybu.es/portfolio/musket/
+    Free for commerical use. */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #fdfffc;
+    font-family: Musket, Helvetica, sans-serif;
+}
+
+main {
+    margin-top: 80px;
+}
+
+p {
+    font-size: 1em;
+    font-family: Musket;
+}
+
+h1, h2 {
+    font-family: Coyote, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 15%;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h6 {
+    font-size: 1em;
+    text-align: center;
+    color:white;
+    background: #B3D6CF;
+    width: 30%;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+button, .submit_review {
+    color: white;
+    font-family: Coyote, Helvetica, sans-serif;
+    font-size: 1.5em;
+    padding: 3px 10px;
+    background-color: #fcd800;
+    border: 4px solid white;
+    transition: all .2s ease-in-out;
+    margin: 0 3%;
+}
+
+button:hover{
+    border-color: #42c5c3;
+    color: #42c5c3;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.heading{
+    text-align: center;
+}
+
+.cite_h {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: #BCBCBC;
+    padding: 0 5px 5px 5px;
+    /* background: white; */
+    transition: all .2s ease-in-out;
+    position: absolute;
+    left: 50px;
+    top: 350px;
+}
+
+.cite {
+    text-decoration: none;
+    font-size: 0.8em;
+    padding: 0 5px 5px 5px;
+    color: #BCBCBC;
+    /* background: white; */
+    transition: all .2s ease-in-out;
+    margin: 2px auto;
+    display: block;
+    width: auto;
+}
+
+.cite_h:hover, .cite:hover{
+    color: #FCEB8A;
+    transform: scale(1.1);
+}
+
+div.line {
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+.margin_bottom {
+    margin-bottom: 50px;
+}
+
+.margin_top {
+    margin-top: 180px;
+}
+
+.center {
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.column {
+    background-color:#fcd800;
+    width: 40%;
+    height: auto;
+    margin: 5% 20px;
+    padding: 0 30px 30px 30px;
+    align-items: stretch;
+}
+
+.column p, .column li {
+    font-size: 20px;
+}
+
+/* -------------------nav bar-------------------------- */
+nav li{
+    display: inline;
+    list-style-type: none;
+    margin: 0 7%;
+    overflow: hidden;
+    font-size: 1.5em;
+}
+
+nav ul {
+    margin: 0 auto;
+    font-family: Coyote, Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 0;
+}
+
+nav {
+    padding: 20px 0;
+    font-family: Fashion;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    background-color: #fdfffc;
+    box-shadow: 3px 5px 9px #575757;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 auto;
+    transition: all .2s ease-in-out;
+    color: black;
+    font-size: 0.8em;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    color:#fcd800;
+}
+
+.current_page a {
+    color: #fcd800;
+}
+
+#nav_logo {
+    width: 140px;
+    position: absolute;
+    top: 10px;
+    left: 43.5%;
+    z-index: 2;
+    margin: 0;
+}
+
+.no_m_r {
+    margin-right: 0;
+}
+
+.no_m_l {
+    margin-left: 0;
+}
+
+/* -------------------footer--------------------- */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 10px;
+    background-color:#fcd800;
+}
+
+footer p {
+    margin: 2px 0 0;
+}
+
+.logo_hold{
+    width: 15%;
+    text-align: right;
+}
+
+.logo_hold img{
+    height: 70px;
+    margin: 0 30px 0 0;
+}
+
+/* -------------------------FOR HOME PAGE---------------------- */
+
+.contact {
+    padding: 40px;
+}
+
+.home_head{
+    background-image:url("../images/home_head.png");
+}
+
+.split {
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.home_story {
+    padding: 10px;
+    float: left;
+    width: 40%;
+    margin: 5%;
+    padding: 30px;
+    height: 600px;
+    font-size:20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.homeimage{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.homeimage img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.home_link{
+    width: 100px;
+    margin: 0 auto;
+}
+
+/* -------------------------FOR LEARN PAGE---------------------- */
+
+/* header image */
+.learn_head{
+    background-image:url("../images/head_learn.JPG");
+}
+
+/* two boxes next to each other */
+* {
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.faq {
+    /* text-align: center; */
+    display: inline-block;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 20px;
+}
+
+.column a {
+    width: 28%;
+    text-align: center;
+}
+/* -------------------------FOR RENT PAGE---------------------- */
+
+/* header image */
+.rent_head{
+    background-image:url("../images/head_rent.JPG");
+}
+
+
+
+/* -------------------------FOR LANDING (INDEX) PAGE---------------------- */
+
+.landing_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.l_bike_container{
+    /* height: 500px; */
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+#yellow_bar {
+    background-color: #fcd800;
+    position: static;
+    display: flex;
+    /* top: 80%; */
+    width: 100%;
+    height: 100px;
+    flex-direction: column;
+}
+
+.logo {
+    margin: 0 auto;
+    height: 160px;
+}
+
+.landing_bike {
+    display: flex;
+    margin: 0 auto;
+    height: 350px;
+}
+
+.after{
+    display: flex;
+    height: 450px;
+}
+
+#landing_button_container {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#upgrade {
+    font-size: 2em;
+    position: fixed;
+    top: 43%;
+    left: 28%;
+    background: none;
+    color: #FF4242;
+    border-color: #FF4242;
+    width: 35%;
+    z-index: 3;
+}
+
+#upgrade:hover {
+    border-color: #fcd800;
+    color: #fcd800;
+}
+
+
+/* -------------------------FOR GALLERY PAGE---------------------- */
+
+.gallery_head {
+    background-image:url("../images/head_gallery.jpg");
+}
+
+.gallery_container{
+    padding: 10px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.co_bike, .ca_bike, .sp_bike {
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.co_bike {
+    background: #B3D6CF;
+}
+
+.ca_bike {
+    background: #CED8A2;
+}
+
+.sp_bike {
+    background: #DDBAB1;
+}
+
+.gallery_info h4, .gallery_info h5, .wish_info p {
+    margin: 10px;
+}
+
+.wish_info a {
+    width: 60%;
+}
+
+.gallery_img, .gallery_info, .wish_img, .wish_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: .3;
+}
+
+.gallery_img img {
+    height: 200px;
+    margin: 25px 25px;
+    object-fit: cover;
+    transition: all .2s ease-in-out;
+}
+
+.gallery_img img:hover {
+    transform:scale(1.1);
+    /* filter:contrast(130%); */
+    filter:saturate(180%);
+}
+
+#wish_button {
+    width: 40px;
+    margin: 0 auto;
+    transition: all .2s ease-in-out;
+}
+
+#wish_button:hover {
+    filter: opacity(80%);
+    transform: scale(1.1);
+}
+
+.wish_title{
+    display: flex;
+    margin: 0 80px;
+}
+
+.wishlist {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    z-index: 3;
+    height: 400px;
+    width: 60px;
+    background-color: #fcd800;
+    top: 20%;
+    right: 0;
+    transition: width 2s ease-in-out;
+    border: solid 5px #fdfffc;
+    border-right: none;
+    color: #fdfffc;
+    box-shadow: 10px 5px 20px #a1a0a0;
+}
+
+.show_list {
+    width: auto;
+    transition: width 2s ease-in-out;
+}
+
+.show_wish {
+    position: absolute;
+    top: 45%;
+}
+
+.button_holder {
+    width: 60px;
+    margin: 0 10px;
+}
+
+.wishlist_items, .wishlist_stuff {
+    display: flex;
+    flex-direction: row;
+}
+
+.delete_wish_button {
+    color: white;
+    font-family: Coyote;
+    padding: 3px 10px;
+    background-color: #fcd800;
+    border: 2px solid white;
+    transition: all .2s ease-in-out;
+    margin: 5px;
+}
+
+.delete_wish_button:hover {
+    transform: scale(1.1);
+    background-color: #FCE14B;
+}
+
+.wish_img img {
+    height: 70px;
+    margin: 5px 5px;
+    object-fit: cover;
+    transition: all .2s ease-in-out;
+}
+
+.wish_img {
+    margin: 20px;
+}
+
+#notice {
+    background: #fcd800;
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+/* -------------------------FOR BIKES PAGE---------------------- */
+
+.bike_container img{
+    width: 65%;
+    margin: 0 auto;
+}
+
+.bike_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bike_title {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+.descr_container {
+    background: #fcd800;
+    padding: 20px 30px;
+    margin: 20px 200px;
+}
+
+.descr_container a {
+    text-align: center;
+    width: 17%;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+}
+
+.wish_stuff {
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.wish_stuff p {
+    margin: 20px 0;
+}
+
+/* review stuff */
+
+.review_container, .review_content, #add_review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review_box {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 50%;
+    border: 4px solid #fcd800;
+}
+
+.review_box p, .review_box h3 {
+    margin: 0;
+}
+
+.review_content h3 {
+    margin-bottom: 5px;
+}
+
+.review_content{
+    width: 80%;
+    padding: 10px;
+}
+
+.review_likes {
+    background: #fcd800;
+    padding: 10px;
+    width: 20%;
+    text-align: center;
+    color: white;
+}
+
+.review_likes p {
+    font-size: 0.8em;
+}
+
+.upvote_button{
+    height: 40px;
+    margin: 5px auto;
+    transition: all .2s ease-in-out;
+}
+
+.upvote_button:hover{
+    transform: scale(1.2);
+}
+
+/* add review form */
+
+#add_review {
+    width: 50%;
+    margin: 10px auto;
+    background: #B3D6CF;
+    padding: 30px;
+    text-align: center;
+    font-family: Musket;
+}
+
+#add_review textarea {
+    width: 60%;
+    margin: 10px auto;
+}
+
+textarea{
+    resize: none;
+}
+
+.rev_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.rev_row input, .rev_row label {
+    margin: 10px 5px;
+}
+
+.rev_row input{
+    width: 43%;
+}
+
+.rev_row input, #add_review textarea {
+    border: none;
+}
+
+.submit_review {
+    width: 20%;
+    font-size: 1em;
+    margin: 10px auto;
+    color: white;
+    border-color: white;
+    background: #B3D6CF;
+    transition: all .2s ease-in-out;
+}
+
+.submit_review:hover {
+    color: black;
+    border-color: black;
+    transform: scale(1.1);
+}
